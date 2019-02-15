@@ -2,8 +2,8 @@
 const client = new Discord.Client();
  console.log("Scrpit By Yaaaz");
 
-const adminprefix = "البرفكس";
-const developers = ['الايدي'];
+const adminprefix = "Y";
+const developers = ['446446238452416538'];
 
 
 client.on('ready', () => {
