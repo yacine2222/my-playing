@@ -12,7 +12,7 @@ if(!mohamed) return;
 
 if(mohamed) {
 
-setTimeout(() => mohamed.send(**# WeLCoMe To , Magic ' Server :rose:**), 4000)
+setTimeout(() => mohamed.send(`**# WeLCoMe To , Magic ' Server :rose:**`), 4000)
 
 }
 
