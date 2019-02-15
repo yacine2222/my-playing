@@ -1,24 +1,72 @@
+const Discord = require('discord.js'),
+
+    client = new Discord.Client({sisableEveryone: true})
+
+    console.log("تم التشغيل,");
+
+
+const devs = ['446446238452416538' , '' , ''];
+
 const adminprefix = "Y";
-const devs = ['446446238452416538','446446238452416538'];
+
 client.on('message', message => {
-  var argresult = message.content.split(` `).slice(1).join(' ');
-    if (!devs.includes(message.author.id)) return;
-    
-if (message.content.startsWith(adminprefix + 'بلاي')) {
-  client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
-} else 
-  if (message.content.startsWith(adminprefix + 'نيم')) {
-client.user.setUsername(argresult).then
-    message.channel.sendMessage(`**${argresult}** : تم تغيير أسم البوت إلى`)
-return message.reply("**لا يمكنك تغيير الاسم يجب عليك الانتظآر لمدة ساعتين . **");
-} else
-  if (message.content.startsWith(adminprefix + 'افتار')) {
-client.user.setAvatar(argresult);
-  message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
-      } else     
-if (message.content.startsWith(adminprefix + 'ستريم')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk");//wennnn
-    message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
-}
-});
+
+    var argresult = message.content.split(` `).slice(1).join(' ');
+
+      if (!devs.includes(message.author.id)) return;
+
+      
+
+  if (message.content.startsWith(adminprefix + 'ply')) {
+
+    client.user.setGame(argresult);
+
+      message.channel.sendMessage(`**  ${argresult} ply .. ✅**`)
+
+  } else 
+
+  if (message.content.startsWith(adminprefix + 'wt')) {
+
+  client.user.setActivity(argresult, {type:'WATCHING'});
+
+      message.channel.sendMessage(`**  ${argresult} wt .. ✅**`)
+
+  } else 
+
+  if (message.content.startsWith(adminprefix + 'ls')) {
+
+  client.user.setActivity(argresult , {type:'LISTENING'});
+
+      message.channel.sendMessage(`**  ${argresult} ls .. ✅**`)
+
+  } else 
+
+  if (message.content.startsWith(adminprefix + 'st')) {
+
+    client.user.setGame(argresult, "https://www.twitch.tv/muuuuuute");
+
+      message.channel.sendMessage(`**  ${argresult} st .. ✅**`)
+
+    }
+
+  if (message.content.startsWith(adminprefix + 'us')) {
+
+  client.user.setUsername(argresult).then
+
+      message.channel.send(`**us ..**${argresult}** `)
+
+  } else
+
+  if (message.content.startsWith(adminprefix + 'av')) {
+
+  client.user.setAvatar(argresult);
+
+    message.channel.send(`**avatar ... :** `);
+
+  }
+
+  });
+
+  
+
+client.login(process.env.BOT_TOKEN);
